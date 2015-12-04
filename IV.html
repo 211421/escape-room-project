@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> IV </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage IV;
+
+
+void setup()
+{
+  
+  size( 400 , 267 );
+  
+	frameRate( 30 );
+  
+	IV = loadImage ("images/IV.jpg");
+   
+
+}
+
+
+void draw()
+{
+
+	image(IV,0,0);
+    
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseY > 200 && mouseY < 240 &&
+			mouseX > 340 && mouseX < 380)
+		{
+			link("second room.html");
+		}
+	}
+	
+
+	fill(255,255,255);
+	text("BACK",350,225);
+	
+	
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

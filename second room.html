@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> escape room project  </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage background1; 
+
+
+
+
+void setup(){
+
+	size( 400,270 );
+	frameRate( 30 );
+	background1 = loadImage("images/background.jpg");
+
+}
+
+
+
+void draw()
+{
+
+	image(background1,0,0);
+	fill(255,255,255);
+	text(mouseX,10,10);
+	text(mouseY,50,10);
+
+
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX > 178 && mouseX < 200 && mouseY > 124 && mouseY < 135) 
+		{
+			link("inside the treasure box.html");
+		}
+	}
+	
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseY > 40 && mouseY < 90 && mouseX > 340 && mouseX < 370)
+		{
+			link("jar.html");
+		}
+	}
+
+
+	if (mousePressed == true && mouseButton == LEFT)
+  { 
+	  if (mouseY > 55 && mouseY < 90 &&  mouseX > 75 && mouseX < 140) 
+	  {
+		link("lamp.html");
+      }
+  }    
+
+
+	if (mousePressed == true && mouseButton == LEFT)
+  { 
+	  if (mouseY > 37 && mouseY < 71 && mouseX > 139 && mouseX < 165) 
+	  {
+		link("IV.html");
+      }
+  }    
+  
+
+
+
+	
+}
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
